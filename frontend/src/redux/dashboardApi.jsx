@@ -1,9 +1,11 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
+const baseUrl = import.meta.env.VITE.BASE.BACKEND.URL;
+
 const dashboardApi = createApi({
   reducerPath: "dashboardApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "/favourite",
+    baseUrl: `${baseUrl}/favourite`,
     prepareHeaders: (headers, { getState }) => {
       const token = getState().token.token;
       if (token) {
