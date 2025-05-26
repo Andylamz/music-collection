@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const baseUrl = import.meta.env.VITE.BASE.BACKEND.URL;
+const baseUrl = import.meta.env.VITE_BASE_BACKEND_URL;
 
 const dashboardApi = createApi({
   reducerPath: "dashboardApi",
