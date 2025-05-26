@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 const dashboardApi = createApi({
   reducerPath: "dashboardApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:8080/favourite",
+    baseUrl: "/favourite",
     prepareHeaders: (headers, { getState }) => {
       const token = getState().token.token;
       if (token) {

@@ -11,13 +11,14 @@ function Register() {
   const [confirmPw, setConfirmPw] = useState("");
   const navigate = useNavigate();
 
-  const [addUser, { data }] = usePostAuthDataMutation();
-  console.log(password, confirmPw);
+  const [addUser] = usePostAuthDataMutation();
 
-  function handleSubmitForm(e) {
+  async function handleSubmitForm(e) {
     e.preventDefault();
-    addUser({ username: username, password: password });
-    console.log(data);
+    const datas = await addUser({ username: username, password: password });
+    if ("error" in datas) {
+      return alert(`${datas.error.data.msg}`);
+    }
     navigate("/login");
   }
 
