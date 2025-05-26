@@ -22,6 +22,7 @@
   border: 1px solid #c20c0c;
   padding: 0 0.2rem;
   min-height: 3rem;
+  max-width: 100%;
 }
 .formContainer button {
   outline: none;
