@@ -39,7 +39,7 @@ function TrackCard({ name, artist, image, trackId, isFavourited }) {
   return (
     <div className={styles.card}>
       <div className={styles.picture}>
-        <img src={image} />
+        <img src={image} alt={`Cover of ${name} by ${artist}`} />
         {!isFavouritedHeart && (
           <i className="fa-regular fa-heart" onClick={handleAddFavourite}></i>
         )}

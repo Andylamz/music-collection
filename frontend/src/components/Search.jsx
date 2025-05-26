@@ -26,7 +26,11 @@ function Search() {
           ref={searchRef}
           onKeyDown={(e) => handlePressEnter(e)}
         />
-        <button className={styles.button} onClick={handleSearch}>
+        <button
+          className={styles.button}
+          onClick={handleSearch}
+          aria-label="search"
+        >
           <i className="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>

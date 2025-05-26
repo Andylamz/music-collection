@@ -58,7 +58,8 @@
     font-size: 0.7rem;
   }
   .listEl input {
-    max-width: 7rem;
+    min-height: 2.5rem;
+    max-width: 8rem;
   }
   .listEl {
     gap: 0.5rem;
