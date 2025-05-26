@@ -22,7 +22,9 @@ function Favourite() {
     loadData();
   }, [navigate, token, loadData]);
 
-  dispatch(setFavouriteList(data?.data));
+  useEffect(() => {
+    dispatch(setFavouriteList(data?.data));
+  }, [dispatch, data]);
   return (
     <>
       <Search />

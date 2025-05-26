@@ -8,7 +8,7 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  text-align: right;
+  /* text-align: right; */
 }
 .listEl {
   display: flex;
@@ -25,11 +25,13 @@
   max-width: 100%;
 }
 .formContainer button {
+  display: block;
   outline: none;
   border: none;
   background: #c20c0c;
   color: #fff;
-  padding: 0.3rem 0.6rem;
+  padding: 0.3rem 1rem;
+  margin: 1rem auto;
 }
 @media (max-width: 1400px) {
   .formContainer {

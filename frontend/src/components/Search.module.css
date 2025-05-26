@@ -12,7 +12,7 @@
   padding: 0.5rem 1rem;
   outline: none;
   border: 1px solid #c20c0c;
-  border-radius: 20px;
+  border-radius: 2rem;
   color: #c20c0c;
 }
 
@@ -24,7 +24,8 @@
   background-color: #c20c0c;
   outline: none;
   border: 1px solid #c20c0c;
-  border-radius: 20px;
+  border-radius: 2rem;
+
   cursor: pointer;
 }
 @media (max-width: 1200px) {
