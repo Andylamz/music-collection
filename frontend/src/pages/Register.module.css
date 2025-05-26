@@ -20,8 +20,9 @@
 .listEl input {
   outline: none;
   border: 1px solid #c20c0c;
-  padding: 0.5rem 0.2rem;
+  padding: 0rem 0.5rem;
   min-height: 3rem;
+  text-overflow: ellipsis;
   max-width: 100%;
 }
 .formContainer button {
@@ -56,9 +57,8 @@
     font-size: 0.7rem;
   }
   .listEl input {
-    padding: 0 0.2rem;
     min-height: 2rem;
-    max-width: 14rem;
+    max-width: 7rem;
   }
   .listEl {
     gap: 0.5rem;
