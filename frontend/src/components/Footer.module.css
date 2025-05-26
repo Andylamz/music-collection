@@ -1,0 +1,35 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 10rem;
+  background-color: #c20c0c;
+  color: #fff;
+  font-size: 2rem;
+}
+
+@media (max-width: 1400px) {
+  .footer p {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 1200px) {
+  .footer p {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 992px) {
+  .footer p {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 768px) {
+  .footer p {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 576px) {
+  .footer p {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,55 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  height: 320px;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* background-color: pink; */
+}
+.picture img {
+  width: 180px;
+  height: 180px;
+  transition: 0.3s;
+}
+.picture img:hover {
+  transform: scale(1.07);
+}
+.picture > i {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  font-size: 1.2rem;
+  color: red;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+.picture > i:hover {
+  transform: scale(1.2);
+}
+.picture span {
+  position: absolute;
+  font-size: 1.2rem;
+  color: rgb(49, 49, 49);
+  left: 0.5rem;
+  bottom: 6rem;
+}
+.picture span i {
+  cursor: pointer;
+  color: rgb(83, 83, 83);
+  margin-top: 2px;
+  padding: 0.4rem 0.6rem;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+.description h4 {
+  font-size: 1.2rem;
+}
+.description p {
+  font-size: 0.7rem;
+}
