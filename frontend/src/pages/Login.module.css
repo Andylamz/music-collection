@@ -50,11 +50,13 @@
 }
 @media (max-width: 576px) {
   .formContainer {
-    width: 16rem;
+    width: 100%;
+    max-width: 16rem;
     font-size: 0.7rem;
   }
   .listEl input {
     padding: 0 0.2rem;
+    max-width: 14rem;
   }
   .listEl {
     gap: 0.5rem;
