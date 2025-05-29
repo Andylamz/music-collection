@@ -22,6 +22,7 @@ function Register() {
     if ("error" in datas) {
       setIsError(true);
       setErrorMsg(datas.error.data.msg);
+      return;
     }
     navigate("/login");
   }
