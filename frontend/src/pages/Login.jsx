@@ -6,11 +6,14 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { setToken } from "../redux/tokenSlice";
 import { useNavigate } from "react-router";
+import Message from "../components/Message";
 
 function Login() {
   const [login] = usePostLoginDataMutation();
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
+  const [isError, setIsError] = useState(true);
+  const [errorMsg, setErrorMsg] = useState("");
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -18,7 +21,9 @@ function Login() {
     e.preventDefault();
     const result = await login({ username, password });
     if ("error" in result) {
-      return alert(result.error.data.msg);
+      setIsError(true);
+      setErrorMsg(result.error.data.msg);
+      return;
     }
     const token = result.data.data;
     dispatch(setToken(token));
@@ -31,6 +36,9 @@ function Login() {
       <Search />
       <Navbar />
       <section className={styles.formContainer}>
+        {isError && (
+          <Message message={errorMsg} handleCloseModel={setIsError} />
+        )}
         <h3>Login</h3>
 
         <form onSubmit={(e) => handleLogin(e)}>

@@ -4,11 +4,14 @@ import Search from "../components/Search";
 import { useState } from "react";
 import { usePostAuthDataMutation } from "../redux/auth";
 import { useNavigate } from "react-router";
+import Message from "../components/Message";
 
 function Register() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPw, setConfirmPw] = useState("");
+  const [isError, setIsError] = useState(true);
+  const [errorMsg, setErrorMsg] = useState("");
   const navigate = useNavigate();
 
   const [addUser] = usePostAuthDataMutation();
@@ -17,7 +20,8 @@ function Register() {
     e.preventDefault();
     const datas = await addUser({ username: username, password: password });
     if ("error" in datas) {
-      return alert(`${datas.error.data.msg}`);
+      setErrorMsg(datas.error.data.msg);
+      setIsError(true);
     }
     navigate("/login");
   }
@@ -27,6 +31,9 @@ function Register() {
       <Search />
       <Navbar />
       <section className={styles.formContainer}>
+        {isError && (
+          <Message message={errorMsg} handleCloseModel={setIsError} />
+        )}
         <h3>Register</h3>
         <form onSubmit={(e) => handleSubmitForm(e)}>
           <div className={styles.listEl}>
@@ -61,7 +68,7 @@ function Register() {
             />
           </div>
           <button disabled={!password || !confirmPw || password !== confirmPw}>
-            Login
+            Register
           </button>
         </form>
       </section>

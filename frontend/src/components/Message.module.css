@@ -1,0 +1,53 @@
+.messageBg {
+  position: absolute;
+  top: 0;
+  min-width: 100vw;
+  min-height: 100%;
+  background-color: transparent;
+}
+
+.messageContainer {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(50%);
+  width: 30rem;
+  background-color: #fcf2f2;
+  /* margin: 5rem auto; */
+  font-size: 1.2rem;
+  padding: 3rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: right;
+}
+
+.messageContainer h3 {
+  color: red;
+}
+.messageContainer button {
+  cursor: pointer;
+}
+@media (max-width: 1400px) {
+  .messageContainer {
+    width: 25rem;
+  }
+}
+@media (max-width: 1200px) {
+  .messageContainer {
+    width: 25rem;
+  }
+}
+@media (max-width: 992px) {
+  .messageContainer {
+    width: 20rem;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .messageContainer {
+    width: 16rem;
+    font-size: 0.7rem;
+  }
+}
