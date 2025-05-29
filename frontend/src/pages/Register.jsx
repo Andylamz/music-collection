@@ -10,7 +10,7 @@ function Register() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPw, setConfirmPw] = useState("");
-  const [isError, setIsError] = useState(true);
+  const [isError, setIsError] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
   const navigate = useNavigate();
 
@@ -20,8 +20,8 @@ function Register() {
     e.preventDefault();
     const datas = await addUser({ username: username, password: password });
     if ("error" in datas) {
-      setErrorMsg(datas.error.data.msg);
       setIsError(true);
+      setErrorMsg(datas.error.data.msg);
     }
     navigate("/login");
   }

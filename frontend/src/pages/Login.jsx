@@ -12,7 +12,7 @@ function Login() {
   const [login] = usePostLoginDataMutation();
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
-  const [isError, setIsError] = useState(true);
+  const [isError, setIsError] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
   const navigate = useNavigate();
   const dispatch = useDispatch();
